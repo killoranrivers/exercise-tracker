@@ -17,15 +17,22 @@ const Exercise = props => (
 export default class ExercisesList extends Component {
 
     state = {
-        exercises: []
+        exercises: [],
+        noData: false,
+        results: []
     };
 
     componentDidMount() {
         axios.get('http://localhost:5000/exercises/')
             .then(res => {
-                this.setState({
-                    exercises: res.data
-                });
+                if (!res.data.length) {
+                    this.setState({noData: true})
+                } else {
+                    this.setState({results: res.data})
+                }
+                // this.setState({
+                //     exercises: res.data
+                // });
             })
             .catch(err => {
                 console.log(err);
@@ -48,24 +55,34 @@ export default class ExercisesList extends Component {
     }
 
     render() {
-        return (
-            <div>
-                <h3>Logged Exercises</h3>
-                <table className="table">
-                    <thead className="thead-light">
-                        <tr>
-                            <th>Username</th>
-                            <th>Description</th>
-                            <th>Duration</th>
-                            <th>Date</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.exerciseList()}
-                    </tbody>
-                </table>
-            </div>
-        )
+        if (this.state.noData) {
+            return (
+            <p>No Data was returned!</p>
+            )
+          } else {
+              return (
+                  <p>Axios worked!</p>
+              )
+          }
+
+        // return (
+        //     <div>
+        //         <h3>Logged Exercises</h3>
+        //         <table className="table">
+        //             <thead className="thead-light">
+        //                 <tr>
+        //                     <th>Username</th>
+        //                     <th>Description</th>
+        //                     <th>Duration</th>
+        //                     <th>Date</th>
+        //                     <th>Actions</th>
+        //                 </tr>
+        //             </thead>
+        //             <tbody>
+        //                 {this.exerciseList()}
+        //             </tbody>
+        //         </table>
+        //     </div>
+        // )
     }
 }
