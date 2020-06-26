@@ -9,7 +9,7 @@ const Exercise = props => (
       <td>{props.exercise.duration}</td>
       <td>{props.exercise.date.substring(0,10)}</td>
       <td>
-        <Link to={`/edit/${props.exercise._id}`}>edit</Link> | <a href="#" onClick={() => { props.deleteExercise(props.exercise._id) }}>delete</a>
+        <Link to={`/edit/${props.exercise._id}`}>edit</Link> | <a href="/#" onClick={() => { props.deleteExercise(props.exercise._id) }}>delete</a>
       </td>
     </tr>
   )
@@ -17,22 +17,15 @@ const Exercise = props => (
 export default class ExercisesList extends Component {
 
     state = {
-        exercises: [],
-        noData: false,
-        results: []
+        exercises: []
     };
 
     componentDidMount() {
-        axios.get('http://localhost:5000/exercises/')
+        axios.get('/exercises/')
             .then(res => {
-                if (!res.data.length) {
-                    this.setState({noData: true})
-                } else {
-                    this.setState({results: res.data})
-                }
-                // this.setState({
-                //     exercises: res.data
-                // });
+                this.setState({
+                    exercises: res.data
+                });
             })
             .catch(err => {
                 console.log(err);
@@ -40,7 +33,7 @@ export default class ExercisesList extends Component {
     }
 
     deleteExercise = id => {
-        axios.delete(`http://localhost:5000/exercises/${id}`)
+        axios.delete(`/exercises/${id}`)
             .then(res => console.log(res.data));
 
         this.setState({
@@ -55,34 +48,32 @@ export default class ExercisesList extends Component {
     }
 
     render() {
-        if (this.state.noData) {
-            return (
-            <p>No Data was returned!</p>
-            )
-          } else {
-              return (
-                  <p>Axios worked!</p>
-              )
-          }
 
-        // return (
-        //     <div>
-        //         <h3>Logged Exercises</h3>
-        //         <table className="table">
-        //             <thead className="thead-light">
-        //                 <tr>
-        //                     <th>Username</th>
-        //                     <th>Description</th>
-        //                     <th>Duration</th>
-        //                     <th>Date</th>
-        //                     <th>Actions</th>
-        //                 </tr>
-        //             </thead>
-        //             <tbody>
-        //                 {this.exerciseList()}
-        //             </tbody>
-        //         </table>
-        //     </div>
-        // )
+        if (this.state.exercises.length > 0) {
+            return (
+                <div>
+                    <h3>Logged Exercises</h3>
+                    <table className="table">
+                        <thead className="thead-light">
+                            <tr>
+                                <th>Username</th>
+                                <th>Description</th>
+                                <th>Duration</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.exerciseList()}
+                        </tbody>
+                    </table>
+                </div>
+            )
+        } else {
+            return (
+                <p>No data</p>
+            )
+        }
+
     }
 }
