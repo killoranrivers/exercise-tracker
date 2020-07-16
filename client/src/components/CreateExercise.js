@@ -4,6 +4,7 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
 
 export default class CreateExercise extends Component {
     state = {
@@ -68,8 +69,8 @@ export default class CreateExercise extends Component {
 
     render() {
         return (
-            <div>
-                <h3>Create New Exercise Log</h3>
+            <Col xs={5} className="mt-5 mx-auto" style={{border: "2px solid black", height: "50%"}}>
+                <h3 className="text-center">Create New Exercise Log</h3>
                 <Form onSubmit={this.onSubmit}>
                     <Form.Group>
                         <Form.Label>Username</Form.Label>
@@ -77,13 +78,13 @@ export default class CreateExercise extends Component {
                             required
                             defaultValue={-1}
                             onChange={this.onChangeUsername}>
-                               <option
-                                    disabled
-                                    key={-1}
-                                    value={-1}>
-                                    Select User
+                            <option
+                                disabled
+                                key={-1}
+                                value={-1}>
+                                Select User
                                     </option>
-                                
+
                             {
                                 this.state.users.map(user => {
                                     return <option
@@ -123,8 +124,8 @@ export default class CreateExercise extends Component {
                         Create Excercise Log
                     </Button>
                 </Form>
+            </Col>
 
-            </div>
         )
     }
 }

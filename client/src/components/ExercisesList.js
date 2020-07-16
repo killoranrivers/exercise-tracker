@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';  
+import Col from 'react-bootstrap/Col';
 
 const Exercise = props => (
     <tr>
@@ -52,7 +53,7 @@ export default class ExercisesList extends Component {
 
         if (this.state.exercises.length > 0) {
             return (
-                <div className="container text-center">
+                <Col xs={10} className="text-center mt-5">
 
                     <h3>Logged Exercises</h3>
                     <div>
@@ -71,7 +72,8 @@ export default class ExercisesList extends Component {
                             </tbody>
                         </Table>
                     </div>
-                </div>
+               
+                </Col>
             )
         } else {
             return (
