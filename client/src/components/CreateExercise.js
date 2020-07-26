@@ -5,6 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
+import Jumbotron from 'react-bootstrap/Jumbotron';
 
 export default class CreateExercise extends Component {
     state = {
@@ -69,7 +70,8 @@ export default class CreateExercise extends Component {
 
     render() {
         return (
-            <Col xs={5} className="mt-5 mx-auto" style={{border: "2px solid black", height: "50%"}}>
+            <Col sm={6} className="mt-5 mx-auto">
+                <Jumbotron className="py-4 shadow-lg border border-dark">
                 <h3 className="text-center">Create New Exercise Log</h3>
                 <Form onSubmit={this.onSubmit}>
                     <Form.Group>
@@ -124,6 +126,7 @@ export default class CreateExercise extends Component {
                         Create Excercise Log
                     </Button>
                 </Form>
+                </Jumbotron>
             </Col>
 
         )

@@ -4,6 +4,8 @@ import axios from 'axios';
 import Table from 'react-bootstrap/Table';  
 import Col from 'react-bootstrap/Col';
 
+import "./ExercisesList.css";
+
 const Exercise = props => (
     <tr>
         <td>{props.exercise.username}</td>
@@ -53,8 +55,8 @@ export default class ExercisesList extends Component {
 
         if (this.state.exercises.length > 0) {
             return (
-                <Col xs={10} className="text-center mt-5">
-
+                <Col xs={12} md={7} className="text-center mx-auto h-100 mt-5" id="exercises-list">
+                    
                     <h3>Logged Exercises</h3>
                     <div>
                         <Table striped>

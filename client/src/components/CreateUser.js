@@ -3,6 +3,7 @@ import axios from 'axios';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
+import Jumbotron from 'react-bootstrap/Jumbotron';
 
 
 export default class CreateUser extends Component {
@@ -33,7 +34,8 @@ export default class CreateUser extends Component {
 
     render() {
         return (
-            <Col xs={5} className="mx-auto" style={{marginTop: "7vh", border: "2px solid black", height: "25%", padding: "15px"}}>
+            <Col sm={4} className="mt-5 mx-auto">
+                <Jumbotron className="shadow-lg border border-dark">
                 <h3 className="text-center">Create New User</h3>
                 <Form onSubmit={this.onSubmit}>
                     <Form.Group>
@@ -48,6 +50,7 @@ export default class CreateUser extends Component {
                         Add User
                     </Button>
                 </Form>
+                </Jumbotron>
                 </Col>
         )
     }
