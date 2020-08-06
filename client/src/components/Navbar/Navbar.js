@@ -14,7 +14,7 @@ export default class MyNavbar extends Component {
 
       <Col xs={12} md={4} xl={2} className="px-0" id="navbar-col">
         <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark" className="flex-sm-column h-100" id="navbar">
-          <Navbar.Brand as={Link} to="/" id="navbar-brand">ExcerTracker</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/" id="navbar-brand">Excer-<br />Tracker</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="flex-sm-column" id="responsive-navbar-nav">
             <Nav className="flex-sm-column" activeKey="/">
