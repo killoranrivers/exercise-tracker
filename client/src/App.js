@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import MyNavbar from "./components/Navbar/Navbar";
 import ExercisesList from "./components/ExercisesList/ExercisesList";
-import EditExercise from "./components/EditExercise";
-import CreateExercise from "./components/CreateExercise";
-import CreateUser from "./components/CreateUser";
+import EditExercise from "./components/EditExercise/EditExercise";
+import CreateExercise from "./components/CreateExercise/CreateExercise";
+import CreateUser from "./components/CreateUser/CreateUser";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 

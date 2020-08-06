@@ -1,0 +1,42 @@
+.jumbotron {
+    font-family: 'Antic', sans-serif;
+    font-size: 1.3vw;
+}
+.jumbotron h3 {
+    font-family: 'Antic', sans-serif;
+    font-size: 2vw;
+}
+.form-control {
+    font-family: 'Antic', sans-serif;
+    font-size: 1.5vw;
+}
+#date {
+    font-family: 'Antic', sans-serif;
+    padding: 8px;
+}
+.btn {
+    font-size: 1.2vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .form-label {
+        font-size: 5vw;
+    }
+    #duration-input {
+        font-size: 4vw;
+    }
+    #desc-input {
+        font-size: 4vw;
+    }
+    #jumbotron h3 {
+        font-size: 6vw;
+    }
+    #date {
+        font-size: 4vw;
+    }
+    #submit-btn {
+        font-size: 4.5vw;
+        padding: 10px;
+    }
+
+}

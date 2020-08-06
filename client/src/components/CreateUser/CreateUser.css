@@ -1,0 +1,32 @@
+.jumbotron {
+    font-family: 'Antic', sans-serif;
+    font-size: 1.3vw;
+}
+.jumbotron h3 {
+    font-family: 'Antic', sans-serif;
+    font-size: 2vw;
+}
+.form-control {
+    font-family: 'Antic', sans-serif;
+    font-size: 1.5vw;
+}
+.btn {
+    font-size: 1.2vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .form-label {
+        font-size: 5vw;
+    }
+    #jumbotron h3 {
+        font-size: 6vw;
+    }
+    .form-control {
+        font-size: 3vw;
+    }
+    #submit-btn {
+        font-size: 4.5vw;
+        padding: 10px;
+    }
+
+}

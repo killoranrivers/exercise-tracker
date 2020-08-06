@@ -8,12 +8,12 @@ import "./ExercisesList.css";
 
 const Exercise = props => (
     <tr>
-        <td>{props.exercise.username}</td>
-        <td>{props.exercise.description}</td>
-        <td>{props.exercise.duration}</td>
-        <td>{props.exercise.date.substring(0, 10)}</td>
-        <td>
-            <Link to={`/edit/${props.exercise._id}`}>edit</Link> | <a href="/#" onClick={() => { props.deleteExercise(props.exercise._id) }}>delete</a>
+        <td className="align-middle">{props.exercise.username}</td>
+        <td className="align-middle">{props.exercise.description}</td>
+        <td className="align-middle">{props.exercise.duration}</td>
+        <td className="align-middle">{props.exercise.date.substring(0, 10)}</td>
+        <td className="align-middle">
+            <Link to={`/edit/${props.exercise._id}`}><i class="far fa-edit"></i></Link> | <a href="/#" onClick={() => { props.deleteExercise(props.exercise._id) }}><i class="far fa-trash-alt"></i></a>
         </td>
     </tr>
 )
@@ -55,7 +55,7 @@ export default class ExercisesList extends Component {
 
         if (this.state.exercises.length > 0) {
             return (
-                <Col xs={12} md={7} className="text-center mx-auto h-100 mt-5" id="exercises-list">
+                <Col xs={12} md={8} className="text-center mx-auto h-100 mt-5" id="exercises-list">
                     
                     <h3>Logged Exercises</h3>
                     <div>

@@ -7,6 +7,8 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 
+import "./EditExercise.css";
+
 export default class EditExercise extends Component {
   state = {
     username: "",
@@ -85,7 +87,7 @@ export default class EditExercise extends Component {
 
   render() {
     return (
-      <Col sm={6} className="mt-5 mx-auto">
+      <Col sm={6} className="mt-5 mx-auto h-100">
         <Jumbotron className="py-4 shadow-lg border border-dark">
         <h3 className="text-center">Edit Exercise</h3>
                 <Form onSubmit={this.onSubmit}>
@@ -93,7 +95,7 @@ export default class EditExercise extends Component {
                         <Form.Label>Username</Form.Label>
                         <Form.Control as="select"
                             required
-                            defaultValue={-1}
+                            value={this.state.username}
                             onChange={this.onChangeUsername}>
                             <option
                                 disabled
@@ -133,12 +135,13 @@ export default class EditExercise extends Component {
                             <DatePicker
                                 selected={this.state.date}
                                 onChange={this.onChangeDate}
+                                id="date"
                             />
                         </div>
                     </Form.Group>
 
-                    <Button variant="dark" type="submit">
-                        Create Excercise Log
+                    <Button variant="dark" type="submit" className="mt-4 mb-3">
+                        Update Excercise Log
                     </Button>
                 </Form>
         </Jumbotron>

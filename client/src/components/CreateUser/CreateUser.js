@@ -5,6 +5,8 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 
+import "./CreateUser.css";
+
 
 export default class CreateUser extends Component {
     state = {
@@ -34,7 +36,7 @@ export default class CreateUser extends Component {
 
     render() {
         return (
-            <Col sm={4} className="mt-5 mx-auto">
+            <Col sm={5} className="mt-5 h-100 mx-auto">
                 <Jumbotron className="shadow-lg border border-dark">
                 <h3 className="text-center">Create New User</h3>
                 <Form onSubmit={this.onSubmit}>
@@ -46,7 +48,7 @@ export default class CreateUser extends Component {
                             onChange={this.onChangeUsername}
                         />
                     </Form.Group>
-                    <Button variant="dark" type="submit">
+                    <Button variant="dark" type="submit" className="mt-4">
                         Add User
                     </Button>
                 </Form>

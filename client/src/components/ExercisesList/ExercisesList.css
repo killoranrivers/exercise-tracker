@@ -1,8 +1,15 @@
 #exercises-list h3 {
     font-family: 'Antic', sans-serif;
+    font-size: 2vw;
 }
 #exercises-list {
     font-family: 'Antic', sans-serif;
+}
+#exercises-list th {
+    font-size: 1.3vw;
+}
+#exercises-list td {
+    font-size: 1.1vw;
 }
 
 @media only screen and (max-width: 600px) {
