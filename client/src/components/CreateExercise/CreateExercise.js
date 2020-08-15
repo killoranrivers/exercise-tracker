@@ -125,7 +125,7 @@ export default class CreateExercise extends Component {
                         </div>
                     </Form.Group>
 
-                    <Button variant="dark" type="submit" className="mt-4 mb-3">
+                    <Button variant="dark" type="submit" className="my-3">
                         Create Excercise Log
                     </Button>
                 </Form>

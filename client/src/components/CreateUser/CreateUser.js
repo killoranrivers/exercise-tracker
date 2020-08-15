@@ -48,7 +48,7 @@ export default class CreateUser extends Component {
                             onChange={this.onChangeUsername}
                         />
                     </Form.Group>
-                    <Button variant="dark" type="submit" className="mt-4">
+                    <Button variant="dark" type="submit" className="mt-3">
                         Add User
                     </Button>
                 </Form>

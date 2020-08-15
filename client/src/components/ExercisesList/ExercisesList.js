@@ -55,7 +55,7 @@ export default class ExercisesList extends Component {
 
         if (this.state.exercises.length > 0) {
             return (
-                <Col xs={12} md={8} className="text-center mx-auto h-100 mt-5" id="exercises-list">
+                <Col xs={12} md={8} className="text-center mx-auto h-100 w-100 mt-5" id="exercises-list">
                     
                     <h3>Logged Exercises</h3>
                     <div>

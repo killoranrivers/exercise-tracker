@@ -13,8 +13,17 @@
 }
 
 @media only screen and (max-width: 600px) {
+    #exercises-list h3 {
+        font-size: 5vw;
+    }
+    #exercises-list {
+        padding: 0px;
+    }
+    #exercises-list th {
+        font-size: 3.8vw;
+    }
     #exercises-list td {
-        padding: 10px 0px;
+        font-size: 3.6vw;
     }
 
 }

@@ -15,17 +15,20 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .form-label {
-        font-size: 5vw;
-    }
-    #jumbotron h3 {
+    .jumbotron h3 {
         font-size: 6vw;
+    }
+    .form-label {
+        font-size: 3.5vw;
     }
     .form-control {
         font-size: 3vw;
     }
-    #submit-btn {
-        font-size: 4.5vw;
+    #date {
+        font-size: 3vw;
+    }
+    .btn {
+        font-size: 4vw;
         padding: 10px;
     }
 
