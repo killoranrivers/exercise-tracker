@@ -2,6 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "start": "node server.js",
+    "node": "20.x"
+  },
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

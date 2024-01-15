@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "engines": {
+    "start": "node server.js",
     "node": "20.x"
   },
   "main": "index.js",
