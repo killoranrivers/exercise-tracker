@@ -12,8 +12,8 @@
     "dev": "nodemon server.js",
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "web": "npm run start:prod"
+    "build": "npm run start",
+    "web": "npm run start"
   },
   "keywords": [],
   "author": "",
