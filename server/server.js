@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
 
-const uri = process.env.ATLAS_URI;
+const uri = process.env.MONGODB_URI;
 mongoose.connect(uri);
 const connection = mongoose.connection;
 connection.once('open', () => {
