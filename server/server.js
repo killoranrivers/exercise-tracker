@@ -3,8 +3,6 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
 
-require('dotenv').config();
-
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -16,7 +14,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
+mongoose.connect(uri);
 const connection = mongoose.connection;
 connection.once('open', () => {
     console.log(`MongoDB database connection established!`);
