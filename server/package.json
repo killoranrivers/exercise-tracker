@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "engines": {
-    "start": "node server.js",
     "node": ">=17.x"
   },
   "main": "server.js",
